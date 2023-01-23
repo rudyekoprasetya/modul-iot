@@ -244,6 +244,33 @@ Coba upload kembali code diatas ke NodeMCU anda dengan menekan panah hijau atau 
 
 Untuk menghentikan eksekusi program tekan tombol stop atau shortcut **CTRL + F2**
 
+Selanjutnya ubah kode diatas menjadi dibawah ini
+
+```python
+#import library PWM
+from machine import Pin,PWM
+#import untuk jeda
+from time import sleep
+
+led = PWM(Pin(14), freq=5000) #setting pin GPIO mode OUTPUT untuk PWM
+
+while True:
+  for cycle in range(0, 1024):
+    led.duty(cycle)
+    sleep(0.005)
+```
+
+simpan ke microcontroller dan jalankan code diatas, *apakah yang terjadi pada led??*
+
+**PWM** atau *Pulse Width Modulation* adalah suatu teknik modulasi yang mengubah lebar pulsa (pulse width) dengan nilai frekuensi dan amplitudo yang tetap. PWM dapat dianggap sebagai kebalikan dari ADC (Analog to Digital Converter) yang mengkonversi sinyal Analog ke Digital, PWM atau Pulse Width Modulation ini digunakan menghasilkan sinyal analog dari perangkat Digital.
+
+Sinyal PWM akan tetap ON untuk waktu tertentu dan kemudian terhenti atau OFF selama sisa periodenya. Yang membuat PWM ini istimewa dan lebih bermanfaat adalah kita dapat menetapkan berapa lama kondisi ON harus bertahan dengan cara mengendalikan siklus kerja atau **Duty Cycle** PWM.
+
+Frekuensi sinyal PWM menentukan seberapa cepat PWM menyelesaikan satu periode. Satu Periode adalah waktu ON dan OFF penuh dari sinyal PWM. Sederhananya, seberapa cepat sinyal PWM harus dihidupkan (ON) dan dimatikan (OFF) ditentukan oleh frekuensi sinyal PWM dan kecepatan berapa lama sinyal PWM harus tetap ON (hidup) ditentukan oleh Duty Cycle sinyal PWM.
+
+Dengan PWM ini kita bisa mengatur output sinyal digital dari Pin NodeMCU sesuai dengan kebutuhan. Semisal digunakan untuk mengatur kecepatan kipas, kecerahan lampu atau lainnya.
+
+
 ### latihan
 1. Buat rangkain dengan 3 LED semisal Led Merah, Kuning, Hijau dimana led tersebut menyala bergantian
 2. Masih dengan rangkaian yang sama buatlah led tersebut menyala bergantian dengan ketentuan

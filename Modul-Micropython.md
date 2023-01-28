@@ -105,13 +105,13 @@ Micro Python adalah proyek yang mendapat pendanaan melalui Kickstarter dan sudah
 Dalam Modul ini karena kita akan menggunakan Mikrokontroller NodeMCU Untuk itu membutuhkan driver dan software pendukung seperti :
 
 1. Python minimal versi 3.7.x, bisa [download disini](https://www.python.org/downloads/) 
-2. Thonny IDE (Micropython) bisa [didownload disini](https://thonny.org/)
+2. Untuk Windows 10 Yang stabil versi 3.3.x bisa [download disini](https://thonny.software.informer.com/download/?ca225eb9). Untuk Thonny IDE Terbaru (Micropython) bisa [didownload disini](https://thonny.org/)
 3. Driver NodeMCU CH340 [download disini](https://sparks.gogo.co.nz/ch340.html)
 4. Firmware Micropython For ESP8266 [download disini](https://micropython.org/download/esp8266/)
 
 Silahkan download dan install software diatas.
 
-### Cara Install Thonny IDE
+### Cara Install Thonny IDE Windows 
 
 1. Setelah Download Lakukan installasi pada file **thonny.exe**
 
@@ -121,6 +121,38 @@ Silahkan download dan install software diatas.
 3. Tunggu sampai selesai berikut adalah tampilan aplikasi Thonny IDE 
 ![ide](https://i0.wp.com/randomnerdtutorials.com/wp-content/uploads/2019/01/8-Install-Thonny-Windows.png)
 
+### Cara Install Thonny Linux
+
+1. Disini saya menggunakan distro ubuntu linux, untuk distro lain silahkan merujuk ke [https://thonny.org/](https://thonny.org/)
+
+2. pastikan python sudah terinstall dalam sistem anda. Cek dengan perintah 
+
+```console
+python --version
+```
+atau
+
+```console
+python3 --version
+```
+
+3. Untuk Install ketikan perintah
+
+```console
+pip install thonny
+```
+
+atau untuk python3
+
+```console
+pip3 install thonny
+```
+
+4. Tunggu sampai installasi selesai, untuk menjalankan gunakan perintah
+
+```console
+thonny
+```
 
 ### Cara Install driver CH340
 1. Setelah Mendowload driver CH340 silahkan extract dan jalankan file **setup.exe**
